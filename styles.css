@@ -1,0 +1,25 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background-image: url('grocery.jpg'); 
+  }
+  main {
+    padding: 20px;
+    background-image: url('grocery.jpg'); 
+    text-align: center;
+  }
+  header {
+    padding: 60px;
+    text-align: center;
+    background: #13293d;
+    color: #fff;
+  }
+  footer {
+
+    position: fixed;
+    text-align: center;
+    background: #13293d;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+  }
