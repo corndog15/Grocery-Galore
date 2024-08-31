@@ -10,7 +10,7 @@
 
 
         <script defer src="./assets/js/script.js" type="text/javascript"></script>
-
+        <script defer src="./assets/js/input.js" type=" text/javascript"></script>
     </head>
 
     <body>
@@ -23,10 +23,22 @@
 
         </header>
         <main>
-            <h2>Your lists will diplay here</h2>
-            <button id="Input">Submit</button>
-            <label for="textArea"></label>
-            <textarea id="textArea" name="textArea" rows="4" cols="50"></textarea>
+            <form id="groceryInput">
+                <h2>Your lists will diplay here</h2>
+                <label for="date">date</label>
+                <input type="text" id="date" placeholder="Enter date:">
+
+
+                <label for="store">store</label>
+                <input type="text" id="store" placeholder="Enter store">
+
+
+                <label for="listItems"></label>
+                <textarea id="listItems" name="listItems" rows="4" cols="50"></textarea>
+
+                <button id="Input">Submit</button>
+                <p id="error"></p>
+            </form>
         </main>
         <footer>
             <p>Grocery input</p>

@@ -1,5 +1,4 @@
-const toggle = document.querySelector("#toggle")
-const backButton = document.querySelector("#pageSwap")
+
 
 // use to switch between pages
 let redirectURL = '';
@@ -8,12 +7,10 @@ const redirectPage = function (url) {
   redirectURL = url;
   location.assign(url);
 };
-backButton.addEventListener('click', function () {
-  redirectPage('form.html');
-});
+
 // takes a given object and saves the new data to the existing blog data in local storage.
 function storeLocalStorage(groceryList) {
-    localStorage.setItem('groceryList ', JSON.stringify(groceryList))
+    localStorage.setItem('groceryList', JSON.stringify(groceryList))
   };
 
 
@@ -25,7 +22,7 @@ function readLocalStorage() {
 
   // the following code is to toggle between light and dark mode
       
-if (localStorage.getItem('theme') === 'dark') {
+/*if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark')
   }
   
@@ -37,4 +34,4 @@ if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     }
-  });
+  }); ?*/
