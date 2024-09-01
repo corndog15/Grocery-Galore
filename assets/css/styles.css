@@ -1,11 +1,11 @@
 body {
     font-family: Arial;
     margin: 0;
-    background-image: url('grocery.jpg'); 
+    background-image: url('../images/grocery.jpg'); 
   }
   main {
     padding: 20px;
-    background-image: url('grocery.jpg'); 
+    background-image: url('../images/grocery.jpg'); 
     text-align: center;
   }
   header {
