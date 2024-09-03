@@ -2,7 +2,7 @@ const main = document.querySelector('main')
 const toggle = document.querySelector("#toggle")
 const backButton = document.querySelector("#pageSwap")
 const message = document.querySelector("#message")
-
+const listClear = document.querySelector("#listClear")
 renderGroceryList()
 
 function renderGroceryList() {
@@ -23,7 +23,13 @@ function renderGroceryList() {
     }
   }
    
-
+  listClear.onclick = function () {
+    localStorage.clear();
+    if(localStorage.length === 0)
+    {
+      message.innerHTML = "Your list will appear here";
+    }
+  }
 
 
     backButton.addEventListener('click', function () {
