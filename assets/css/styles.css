@@ -5,8 +5,16 @@ body {
   }
   main {
     padding: 20px;
-    background-image: url('../images/grocery.jpg'); 
+    
     text-align: center;
+  }
+  section {
+    margin: 20px;
+    padding: 20px;
+    color: #fff;
+    background: #090e91;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   header {
     padding: 60px;
