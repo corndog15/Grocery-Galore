@@ -15,7 +15,7 @@ function renderGroceryList() {
         let postElement = document.createElement('li')
         postElement.innerHTML = `
         <section class="d-flex flex-column w-25 align-items-center mb-3">
-        <h3>Date: ${post.date}</h3>
+        <h3>${post.date}</h3>
         <h4>${post.store}</h4>
         <ul class="list-group">
         ${post.items.map(item => `<li class="list-group-item">${item}</li>`).join('')}
