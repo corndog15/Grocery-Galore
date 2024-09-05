@@ -4,6 +4,7 @@ const listItems = document.querySelector('#listItems')
 const error = document.querySelector('#error')
 const formInput = document.querySelector('#groceryInput')
 const done = document.querySelector('#done')
+const noInput = document.querySelector('#noInput')
 
 let goceryList = [];
 
@@ -25,25 +26,23 @@ function saveUserInput(event) {
 
   currentList.items.push(listItems.value);
   console.log(currentList);
+  listItems.innerHTML = 'Add another item';
 };
+
+
 
 formInput.addEventListener('submit', saveUserInput);
 
-done.addEventListener('click', function () {  
+done.addEventListener('click', function () 
+
+ { if (!currentList || !currentList.items.length) {
+    noInput.textContent = 'Please complete the form.'
+  }
+  else {
 
   goceryList = readLocalStorage()
   goceryList.push(currentList)
   storeLocalStorage(goceryList)
   redirectPage('index.html')
-});
-/*
-    if (!userInput.date || !userInput.store || !userInput.listItems || !userInput.listItems2 || !userInput.listItems3) {
-      error.textContent = 'Please complete the form.'
-    } else {
-      goceryList = readLocalStorage()
-      goceryList.push(userInput)
-      storeLocalStorage(goceryList)
-      redirectPage('index.html')
-    }
-      */
- 
+}});
+
