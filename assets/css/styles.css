@@ -31,3 +31,16 @@ body {
     bottom: 0;
     width: 100%;
   }
+
+#message{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  
+}
+#styleList{
+  width: 100%;
+  min-width: 300px;
+  background-color: #13293d;
+  
+}
