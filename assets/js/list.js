@@ -14,7 +14,7 @@ function renderGroceryList() {
       Posts.forEach(post => {
         let postElement = document.createElement('li')
         postElement.innerHTML = `
-        <section class="d-flex flex-column w-25 align-items-center mb-3">
+        <section id="styleList" class="d-flex flex-column w-25 align-items-center mb-3">
         <h3>${post.date}</h3>
         <h4>${post.store}</h4>
         <ul class="list-group">
