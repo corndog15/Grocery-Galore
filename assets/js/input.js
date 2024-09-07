@@ -19,15 +19,51 @@ function saveUserInput(event) {
     store: store.value,
     items: [],
   };
-  if (!currentList.date || !currentList.store)
+  if (!currentList.store)
   {
     error.textContent = 'Please complete the form.'
   } else
 
   currentList.items.push(listItems.value);
   console.log(currentList);
-  listItems.innerHTML = 'Add another item';
+  listItems.ariaPlaceholder = 'Add another item';
+  
 };
+
+function dateInputModal() { (async () => {
+  const { value: date } = await Swal.fire({
+    title: "select departure date",
+    input: "date",
+    didOpen: () => {
+      const today = (new Date()).toISOString();
+      Swal.getInput().min = today.split("T")[0];
+    }
+  });
+  if (date) {
+  document.querySelector('#date').value = date
+  }
+})()
+}
+date.addEventListener('click', dateInputModal);
+
+function storeInputModal() { (async () => {
+  const { value: store } = await Swal.fire({
+    title: "Select a store",
+    input: "select",
+    inputOptions: {
+      Stores: {
+        harristeeter: "Harris Teeter",
+        lowesfoods: "Lowes foods",
+        walmart: "Walmart",
+    },
+    },
+  });
+  if (store) {
+    document.querySelector('#store').value = store
+  }
+} )()
+}
+store.addEventListener('click', storeInputModal);
 
 
 
