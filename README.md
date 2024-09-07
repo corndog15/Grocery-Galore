@@ -1,2 +1,20 @@
-# project-1
-project 1 for group 3
+# Grocery Galore
+Project 1 for Group 3
+
+* Description
+Galore Grocery is a web-based grocery shopping list app designed to help users organize their weekly shopping. Easily create, manage, and share your grocery lists to make shopping efficient.
+
+* Installation
+
+* Usage
+Sign up or log in to create your grocery lists.
+Add items to your list manually or through smart suggestions.
+Organize your list by category to streamline your shopping.
+
+* Credits
+
+* License
+
+--screenshot
+
+--link to deployed application
