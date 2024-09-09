@@ -15,7 +15,7 @@ Add items to your list manually.
 
 * License
 
---screenshot
+[Website preview image](./assets/images/webimage.png)
 
 # Link to deployed application:
  https://corndog15.github.io/Grocery-Galore/
