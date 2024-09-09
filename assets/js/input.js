@@ -8,12 +8,12 @@ const noInput = document.querySelector('#noInput')
 
 let goceryList = [];
 
-let currentList = null;
+let currentList =  null;
 
 
 function saveUserInput(event) {
   event.preventDefault()
-
+  
   currentList = currentList || {
     date: date.value,
     store: store.value,
@@ -23,16 +23,19 @@ function saveUserInput(event) {
   {
     error.textContent = 'Please complete the form.'
   } else
-
+  
   currentList.items.push(listItems.value);
   console.log(currentList);
-  listItems.ariaPlaceholder = 'Add another item';
+  document.getElementById('listItems').value = 'Add another item';
   
 };
 
+
+
+
 function dateInputModal() { (async () => {
   const { value: date } = await Swal.fire({
-    title: "select departure date",
+    title: "Enter you shopping date",
     input: "date",
     didOpen: () => {
       const today = (new Date()).toISOString();
@@ -65,7 +68,24 @@ function storeInputModal() { (async () => {
 }
 store.addEventListener('click', storeInputModal);
 
-
+function listInputModal() { (async () => {
+  const { value: listItems } = await Swal.fire({
+    title: "Enter your Grocery Item",
+    input: "text",
+    inputLabel: "Grocery Item",
+    showCancelButton: true,
+    inputValidator: (value) => {
+      if (!value) {
+        return "You need to add an item";
+      }
+    }
+  });
+  if (listItems) {
+    document.querySelector('#listItems').value = listItems
+  }
+})()
+} 
+listItems.addEventListener('click', listInputModal);
 
 formInput.addEventListener('submit', saveUserInput);
 
